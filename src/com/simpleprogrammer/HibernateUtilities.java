@@ -17,7 +17,7 @@ public class HibernateUtilities {
     static {
         try {
             Configuration configuration = new Configuration().configure();
-            System.err.println("Configuration object is " + configuration);
+            System.err.println("Configurationon object is " + configuration);
 
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             System.err.println("service registry is " + serviceRegistry);
@@ -28,7 +28,7 @@ public class HibernateUtilities {
         } catch (HibernateException exception){
             exception.printStackTrace(System.err);
             System.out.println("problem creating session factory");
-            System.exit(1);
+//            System.exit(1);
         }
     }
 
